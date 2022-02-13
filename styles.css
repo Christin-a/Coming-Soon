@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --neutral-color: hsl(0, 6%, 24%);
+  --gradient-1: hsl(0, 0%, 100%);
+  --gradient-1-2: hsl(0, 100%, 98%);
+  --gradient-2: hsl(0, 80%, 86%);
+  --gradient-2-2: hsl(0, 74%, 74%);
+  --primary-color: hsl(0, 36%, 70%);
+  --secondary-color: hsl(0, 93%, 68%);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Josefin Sans", sans-serif;
+  background: linear-gradient(135deg, var(--gradient-1) 0%, var(--gradient-1-2) 100%);
+}
+
+.mainSection {
+  display: flex;
+  flex-direction: column;
+  /* background-color:red; */
+  width: 375px;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+}
+
+.base {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  margin-left: 30px;
+}
+
+.base img {
+  width: 7rem;
+}
+
+.mainInfo {
+  text-align: center;
+}
+
+.header {
+  font-size: 2rem;
+  margin: 60px 0 30px;
+}
+
+span {
+  font-weight: 200;
+  color: var(--primary-color);
+  display: block;
+}
+
+h1 {
+  color: var(--neutral-color);
+  font-weight: 500;
+}
+
+.bodyText {
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--primary-color);
+  line-height: 1.5em;
+  margin-bottom: 25px;
+  padding: 0 1rem;
+}
+
+.formControl {
+  color: var(--primary-color);
+  padding: 15px 25px;
+  width: 80vw;
+  border-radius: 30px;
+  border: 1px solid var(--primary-color);
+  background-color: rgba(255, 255, 255, 0);
+
+}
+
+::placeholder {
+  color: var(--primary-color);
+  opacity: .5;
+}
+
+.formContainer::after {
+  content: url(images/icon-arrow.svg);
+  background: var(--gradient-2-2);
+  background: linear-gradient(135deg, var(--gradient-2) 0%, var(--gradient-2-2) 100%);
+  position: absolute;
+  padding: 11px 24px;
+  right: 2rem;
+  border-radius: 30px;
+  -webkit-box-shadow: -2px 14px 22px 6px hsla(0, 80%, 86%, 50%);
+box-shadow: -2px 14px 22px 6px  hsla(0, 80%, 86%, 50%);
+}
+
+input[type="email"]:focus {
+  outline: none !important;
+  border: 1px solid var(--primary-color);
+  color: var(--neutral-color);
+}
+
+@media (min-width: 1400px) {
+}
