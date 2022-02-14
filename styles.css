@@ -20,9 +20,11 @@ h3 {
   margin: 0;
 }
 
+
 body {
+  min-height: 100vh;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   font-family: "Josefin Sans", sans-serif;
   background: linear-gradient(135deg, var(--gradient-1) 0%, var(--gradient-1-2) 100%);
 }
@@ -30,8 +32,8 @@ body {
 .mainSection {
   display: flex;
   flex-direction: column;
-  width: 375px;
-  height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
   margin: 0;
   position: relative;
 }
@@ -40,21 +42,28 @@ body {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 80px;
-  margin-left: 30px;
+  height: 8vh;
+  margin: .5rem 1rem;
 }
 
 .base img {
-  width: 7rem;
+  width: 25%;
 }
 
-.mainInfo {
+.textSection {
   text-align: center;
+  width: 100%;
+  height: auto;
 }
 
 .previewImg {
-  width: 100vh;
-  height: 15.5rem;
+  width: 100%;
+  height: auto;
+  }
+
+.previewImg img {
+  width: 100%;
+  height: auto;
   }
 
   .previewImg2 {
@@ -62,8 +71,10 @@ body {
   }
 
 .header {
-  font-size: 2rem;
-  margin: 60px 0 30px;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  margin: 2.5rem 0;
+  text-transform: uppercase;
 }
 
 span {
@@ -82,36 +93,53 @@ h1 {
   font-size: 1rem;
   color: var(--primary-color);
   line-height: 1.5em;
-  margin-bottom: 25px;
+  margin-bottom: 2rem;
   padding: 0 1rem;
+}
+
+.formContainer{
+  width: auto;
+  height: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .formControl {
   color: var(--primary-color);
-  padding: 15px 25px;
+  padding: 1rem 2rem;
   width: 18rem;
   border-radius: 30px;
   border: 1px solid var(--primary-color);
   background-color: rgba(255, 255, 255, 0);
-
 }
+
+
 
 ::placeholder {
   color: var(--primary-color);
   opacity: .5;
 }
 
-.formContainer::after {
-  content: url(images/icon-arrow.svg);
-  background: var(--gradient-2-2);
+.btn {
   background: linear-gradient(135deg, var(--gradient-2) 0%, var(--gradient-2-2) 100%);
-  position: absolute;
-  padding: 11px 24px;
-  right: 2rem;
-  border-radius: 30px;
-  -webkit-box-shadow: -2px 14px 22px 6px hsla(0, 80%, 86%, 50%);
-box-shadow: -2px 14px 22px 6px  hsla(0, 80%, 86%, 50%);
+  box-shadow: -2px 14px 22px 6px  hsla(0, 80%, 86%, 50%);
+  height: 3rem;
+  width: 4rem;
+  border: none;
+  border-radius: 15rem;
+  margin-left: -4rem;
+  
 }
+
+.icon {
+  background: url(images/icon-arrow.svg) no-repeat center center;
+  width: 50px;
+  height: 50px;
+  transform: translateX(10px);
+}
+
 
 input[type="email"]:focus {
   outline: none !important;
@@ -120,25 +148,54 @@ input[type="email"]:focus {
 }
 
 @media (min-width: 1400px) {
-  body {
-    background-image: url(images/bg-pattern-desktop.svg);
-  }
-
+  
   .mainSection {
+    background-image: url(images/bg-pattern-desktop.svg);
     flex-direction: row;
-    flex-wrap: wrap; 
-    flex-shrink: 1;
-    background-color:red;
-    width: 1400px;
-    height: 100vh;
+    height: 100%;
     position: relative;
     border: 1px solid black;
   }
-
   
+  .base {
+    margin-left: 0;
+  }
+
   .textSection {
-    width:4rem;
-    background-color: blue;
+    width:  60%; 
+    text-align: left;
+    margin-left: 7rem;
+    padding-right: 12rem;
+  }
+
+  .header {
+    font-size: 3rem;
+    line-height: 5rem;
+    letter-spacing: 1rem;
+
+  }
+
+  .mainInfo {
+    padding: 6rem 6rem 0 0;
+  }
+
+  .bodyText {
+    line-height: 2rem;
+  }
+
+  .formControl {
+    width: 30rem;
+  }
+
+
+  .btn {
+    height: 3.1rem;
+    width: 5.3rem;
+    margin-left: -5rem;
+  }
+
+  .icon {
+    transform: translateX(18px);
   }
 
   .previewImg2 {
@@ -147,12 +204,8 @@ input[type="email"]:focus {
 
 .previewImg2 {
   background-color: whitesmoke;
-  width: 50vw;
-
-}
-
-.previewImg2 img {
-width: 200px;
+  width: 40%;
+  height: 100%;
 }
 
 .previewImg {
