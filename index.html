@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,400;1,500&display=swap"
     rel="stylesheet">
+    <script src="main.js" defer></script>
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
@@ -38,10 +39,11 @@
             Add your email below to stay up-to-date with announcements and our launch deals.
           </div>
           <div class="formContainer">
-            <input type="email" class="formControl" placeholder="Email  Address">
+            <input type="email" class="formControl error" placeholder="Email Address">
+            <img class="errorIcon" src="images/icon-error.svg" alt="">
             <button type="submit" class="btn"><span class="icon"></span></button>
-
           </div>
+          <small>The email you've entered is invalid</small>
         </div>
       </div>
       <div class="previewImg2">
